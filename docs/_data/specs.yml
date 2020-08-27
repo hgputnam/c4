@@ -1,38 +1,35 @@
-nodes: 429
-physical_cores: 10428
-gpu_nodes: 38
-gpus: 132
-communal_gpu_nodes: 7
-communal_gpus: 24
+nodes: 9
+physical_cores: NA
+gpu_nodes: 0
+gpus: 10
+communal_gpu_nodes: 0
+communal_gpus: 0
 
 ## RAM [GiB]:
-ram_min: 48
-ram_max: 1512
+ram_min: NA
+ram_max: NA
 
 ## Disk /swap [GiB]:
-swap_min: 4
-swap_max: 4
+swap_min: NA
+swap_max: NA
 
 ## Local /tmp [GiB]:
-local_tmp_size_min: 4
-local_tmp_size_max: 8
+local_tmp_size_min: NA
+local_tmp_size_max: NA
 
 ## Local /scratch [TiB]:
-local_scratch_size_min: 0.1
-local_scratch_size_max: 1.8
+local_scratch_size_min: NA
+local_scratch_size_max: NA
 
 ## Global /wynton/scratch [TiB]:
-global_scratch_size_total: 615
-
-## NetApp home [TiB]:
-netapp_home_size_total: 20
+global_scratch_size_total: 262
 
 ## User home [TiB]:
-home_size_total: 383
+home_size_total: 110
 
 ## Group home [TiB]:
-group_size_total: 5600
+group_size_total: NA
 
 ## Job queues
-pu_total: 20186
-member_q_total: 7023
+pu_total: NA
+member_q_total: NA

@@ -32,6 +32,8 @@ To apply for an account on the {{ site.cluster.name }} cluster, please fill out 
 <strong>Please make sure you provide all the information applicable to you in this form to avoid any delays</strong>
 </div>
 
+<!--
+
 <form action="https://hub.wynton.ucsf.edu/cgi-bin/join" method="GET">
  <div class="form-group">
   <label for="given_name">First name</label> <span style="color: red">*</span><br>
@@ -160,6 +162,7 @@ To apply for an account on the {{ site.cluster.name }} cluster, please fill out 
   <button type="submit" onclick="save_form()" class="btn btn-primary">Request Account</button> &nbsp; <em>(An email confirmation will be sent)</em>
 </form>
 
+-->
 
 <script>
 function load_form() {

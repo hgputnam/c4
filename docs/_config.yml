@@ -1,64 +1,65 @@
-title: 'UCSF Wynton HPC Cluster'
+title: 'UCSF C4 Cluster'
 theme: jekyll-theme-minimal
 
 google_analytics: UA-128646955-1
 
 organization:
-  name: "Wynton"
-  url: "https://wynton.ucsf.edu/"
+  name: "CBI"
+  url: "https://cbi.ucsf.edu/"
 
 cluster:
-  name: "Wynton HPC"
-  nickname: "Wynton"
-  version: "1.0"
-  email_admin: wynton_admin@ucsf.edu
-  email_support: wynton-support@ucsf.edu
+  name: "C4"
+  nickname: "C4"
+  version: "0.1"
+  email_admin: harry.putnam@ucsf.edu
+  email_support: harry.putnam@ucsf.edu
   
 login:
-  name: "wynlog2"
-  hostname: "log2.wynton.ucsf.edu"
-  ip: "169.230.134.15"
+  name: "c4-log1"
+  hostname: "c4-log1.ucsf.edu"
+  ip: "169.230.134.135"
 devel:
-  name: "dev3"
-  hostname: "dev3"
-  ip: "172.26.32.8"
+  name: "c4-dev1"
+  hostname: "c4-dev1"
+  ip: "NA.NA.NA.NA"
 transfer:
-  name: "dt2"
-  hostname: "dt2.wynton.ucsf.edu"
-  ip: "172.26.1.17"
+  name: "not-yet-available-c4-dt1"
+  hostname: "non-yet-available-c4-dt1.ucsf.edu"
+  ip: "NA.NA.NA.NA"
+
 
 login1:
-  name: "wynlog1"
-  hostname: "log1.wynton.ucsf.edu"
-  ip: "169.230.126.77"
+  name: "c4-log1"
+  hostname: "c4-log1.ucsf.edu"
+  ip: "169.230.134.135"
 login2:
-  name: "wynlog2"
-  hostname: "log2.wynton.ucsf.edu"
-  ip: "169.230.134.15"
+  name: "c4-log2"
+  hostname: "c4-log2.ucsf.edu"
+  ip: "169.230.134.136"
 dev1:
-  name: "dev1"
-  hostname: "dev1"
-  ip: "172.26.32.2"
+  name: "c4-dev1"
+  hostname: "c4-dev1"
+  ip: "NA.NA.NA.NA"
 dev2:
-  name: "dev2"
-  hostname: "dev2"
-  ip: "172.26.32.7"
+  name: "c4-dev2"
+  hostname: "c4-dev2"
+  ip: "NA.NA.NA.NA"
 dev3:
-  name: "dev3"
-  hostname: "dev3"
-  ip: "172.26.32.8"
+  name: "not-yet-available-c4-dev3"
+  hostname: "not-yet-available-c4-dev3.ucsf.edu"
+  ip: "NA.NA.NA.NA"
 gpudev1:
-  name: "qb3-gpudev1"
-  hostname: "gpudev1"
-  ip: "172.26.32.3"
+  name: "not-yet-available-c4-gpudev1"
+  hostname: "not-yet-available-c4-gpudev1.ucsf.edu"
+  ip: "NA.NA.NA.NA"
 transfer1:
-  name: "dt1"
-  hostname: "dt1.wynton.ucsf.edu"
-  ip: "169.230.126.58"
+  name: "not-yet-available-c4-dt1"
+  hostname: "non-yet-available-c4-dt1.ucsf.edu"
+  ip: "NA.NA.NA.NA"
 transfer2:
-  name: "dt2"
-  hostname: "dt2.wynton.ucsf.edu"
-  ip: "172.26.1.17"
+  name: "not-yet-available-c4-dt2"
+  hostname: "non-yet-available-c4-dt2.ucsf.edu"
+  ip: "NA.NA.NA.NA"
   
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
