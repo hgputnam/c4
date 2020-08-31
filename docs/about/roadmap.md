@@ -25,7 +25,7 @@ _Starting September 1, 2020_
 
 * Development: Added two development nodes (2020-08-13)
 
-* Software: Replicate the core software that is installed on [Wynton HPC] on deveopment and compute nodes (2020-08-19)
+* Software: Replicate the core software that is installed on [Wynton HPC] on development and compute nodes (2020-08-19)
 
 * Software: Added the CBI software stack (2020-08-20)
 
