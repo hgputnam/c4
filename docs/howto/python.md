@@ -12,9 +12,11 @@ The below examples uses Python 2, but it works analogously in Python 3, i.e. jus
 ## Installing Python packages
 
 The standard way to install Python packages is by using the [_pip_](https://packaging.python.org/tutorials/installing-packages/) package management system.  You often find installation instructions online such as:
+
 ```sh
 $ pip install HTSeq
 ```
+
 It will _not_ work. If you attempt to run this as-is on the cluster, you get lots of errors complaining about lack of write permissions etc., which is because it tries to install the package in the system-wide Python package folder (to which only sysadms have write permission).  You might also see instructions saying you should use `sudo ...` - that will also not work for the same reason.
 
 There are **two ways for non-privileged users to install Python packages using the 'pip' module**:
@@ -30,24 +32,21 @@ Installing globally is the easiest, because you don't have to remember to _activ
 ### 1. Installing globally (aka "user-site")
 
 First of all, if an online installation instructions says `pip install ...`, replace that with `python2 -m pip install ...`.  Second, to install globally to your home directory, remember to always specify the `--user` option.  For example,
-```sh
-[alice@{{ site.devel.name }} ~]$ python2 -m pip install --user HTSeq
-DEPRECATION: Python 2.7 will reach the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 won t be maintained after that date. A future version of pip will drop support for Python 2.7. More details about Python 2 support in pip, can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support
-Collecting HTSeq
-  Cache entry deserialization failed, entry ignored
-  Downloading https://files.pythonhosted.org/packages/05/68/2f34983381d9efcdbbc63a551ab4265b5695d92e491532ef1f1d5dcc5375/HTSeq-0.11.2-cp27-cp27mu-manylinux1_x86_64.whl (1.0MB)
-    100% |████████████████████████████████| 1.0MB 685kB/s
-Requirement already satisfied (use --upgrade to upgrade): numpy in /usr/lib64/python2.7/site-packages (from HTSeq)
-Collecting pysam>=0.9.0 (from HTSeq)
-  Cache entry deserialization failed, entry ignored
-  Using cached https://files.pythonhosted.org/packages/15/e7/2dab8bb0ac739555e69586f1492f0ff6bc4a1f8312992a83001d3deb77ac/pysam-0.15.3.tar.gz
-Installing collected packages: pysam, HTSeq
-  Running setup.py install for pysam ... done
-Successfully installed HTSeq-0.11.2 pysam-0.15.3
-You are using pip version 8.1.2, however version 19.3.1 is available.
-You should consider upgrading via the 'pip install --upgrade pip' command.
 
-[alice@{{ site.devel.name }} ~]$
+<!-- code-block #1 -->
+```sh
+[alice@dev3 ~]$ python2 -m pip install --user HTSeq
+Collecting HTSeq
+  Using cached https://files.pythonhosted.org/packages/c4/04/b9b0c5514dcd09e64481e8ebc242aef162646b6de956ffb44595d1de0f69/HTSeq-0.12.4.tar.gz
+Requirement already satisfied (use --upgrade to upgrade): numpy in /usr/lib64/python2.7/site-packages (from HTSeq)
+Collecting pysam (from HTSeq)
+  Downloading https://files.pythonhosted.org/packages/9b/ab/a7f2637b5bc8fb278aa9b5a5d4eab70856625c09b1d95328e3b78132847c/pysam-0.16.0.1-cp27-cp27mu-manylinux1_x86_64.whl (9.2MB)
+Installing collected packages: pysam, HTSeq
+  Running setup.py install for HTSeq: started
+    Running setup.py install for HTSeq: finished with status 'done'
+Successfully installed HTSeq pysam
+You are using pip version 8.1.2, however version 20.2.2 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
 ```
 
 To see all Python packages that you have installed globally, use `python2 -m pip list --user`.  To also see packages installed site wide on the cluster, use `python2 -m pip list`.  Packages installed with `python2 -m pip list --user` are typically installed to your `~/.local/lib/python2.7/site-packages/` folder.  If CLI executables are installed with one of those packages, they are often installed to `~/.local/bin/`.
@@ -87,6 +86,7 @@ Successfully installed virtualenv-16.7.7
 #### 2.2 Create a virtual environment (once per project)
 
 Start by creating a folder specific to the project you are currently working on.  Each project folder will have its own unique set of installed packages.  For a project that requires Python 2, do the following (once):
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ virtualenv -p $(which python2) my_project
 Running virtualenv with interpreter /usr/bin/python2
@@ -106,17 +106,22 @@ Always remember to specify option <code>-p $(which python2)</code> when you call
 #### 2.3 Activate virtual environment (each time you use project)
 
 Now, each time you want to work on your project, go to its folder and _active the virtual environment_:
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ cd my_project
 [alice@{{ site.devel.name }} my_project]$ . bin/activate   ## IMPORTANT! Note period in front
 (my_project) [alice@{{ site.devel.name }} my_project]$
 ```
+
 Note how `(my_project)` is prepended to the shell prompt when the virtual environment `my_project` is _activate_.  This tells you that you run in a customized Python environment.  Specifically, `python2` now points to a local, frozen version:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ which python2
 ~/my_project/bin/python2
 ```
+
 Similarly, `python` points to:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ which python
 ~/my_project/bin/python
@@ -128,6 +133,7 @@ lrwxrwxrwx. 1 alice boblab 7 Nov 18 14:04 ./bin/python -> python2
 Note how this local `python` command points to the local `python2` command.  What is interesting, and important to notice, is that _if we set up a Python 3 virtual environment, then the local `python` command will point to the local `python3` command_.  In other words, when we use virtual environments, the `python` command will be using either Python 2 or Python3 at our choice.
 
 To see what Python packages are installed _in the virtual environment_, use:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python2 -m pip list
 Package    Version
@@ -163,6 +169,7 @@ Successfully installed HTSeq-0.11.2 numpy-1.16.5 pysam-0.15.3
 ```
 
 To see which packages are now installed _in the virtual environment_ (the "project folder") and what their versions are, do:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} my_project]$ python2 -m pip list
 Package    Version
@@ -175,7 +182,6 @@ pysam      0.15.3
 setuptools 41.6.0
 wheel      0.33.6
 ```
-
 
 
 #### 2.5 Returning to a project
@@ -205,12 +211,14 @@ When submitting a job to the scheduler, make sure the job script loads all requi
 </div>
 
 To _deactivate_ a Python virtual environment, either open a fresh terminal (e.g. log out and back in), or use:
+
 ```sh
 (my_project) [alice@{{ site.devel.name }} ~]$ deactivate
 [alice@{{ site.devel.name }} ~]$ deactivate
 ```
 
 Note how prefix `(my_project)` was dropped from the shell prompt and `python2` now points to the system-wide installation;
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ which python2
 /usr/bin/python2
@@ -223,11 +231,14 @@ Note how prefix `(my_project)` was dropped from the shell prompt and `python2` n
 ### Upgrading pip
 
 You will at times get warnings that you are running an old version of 'pip':
+
 ```sh
 You are using pip version 8.1.2, however version 19.3.1 is available.
 You should consider upgrading via the 'pip install --upgrade pip' command.
 ```
+
 Don't use the suggested command call in that message.  Instead, use:
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ python2 -m pip install --user --upgrade pip
 Cache entry deserialization failed, entry ignored
@@ -239,6 +250,7 @@ Successfully installed pip-19.3.1
 ```
 
 To check the installed version of the 'pip' module, use:
+
 ```sh
 [alice@{{ site.devel.name }} ~]$ python2 -m pip --version
 pip 19.3.1 from /wynton/home/boblab/alice/.local/lib/python2.7/site-packages/pip (python 2.7)
