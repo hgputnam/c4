@@ -80,7 +80,7 @@ We know everything works fine. No going back.
 
 * Backup: Users' home accounts backed up on a nightly basis.
 
-* Network: 10 Gpbs.
+* Network: 10 Gbps.
 
 
 See also [News].
