@@ -4,26 +4,25 @@
 
 _Starting September 1, 2020_  
 
+* [x] Invite self-sufficient, advanced HPC users to try out the C4 cluster and to give constructive feedback.
+
 * [x] Scheduler: Rudimentary Slurm configuration with one shared partition ("queue") and one lab-owned partition.
 
-* [ ] Website: Set up a C4 website with the most basic documentation.
+   - [x] Interactive jobs, e.g. `srun --pty bash`.
 
-* [x] Invite self-sufficient, advanced HPC users to try out the C4 cluster.
+* [x] c4-help issue tracker <https://github.com/UCSF-CBI/c4-help>
+
+* [x] Shared CBI software + modules, i.e. /software/c4/CBI/
+
+* [ ] Shared software + modules of other labs: /software/c4/<group>/
+
+* [ ] Website: Set up a C4 website with the most basic documentation.
 
 * [ ] Lab compute nodes: 4 new lab nodes (4*56 = 224 physical cores).
 
 * [ ] Mount lab storage: ... (three labs)
 
-* [ ] Shared software installs + modules: /software/c4/<group>/
-
 * [ ] Add one communal node (TIPCC node n2)
-
-* [ ] c4-help issue tracker
-
-
-<!--
-* [ ] Local /tmp (8 GiB), /swap (4 GiB), and local /scratch (local disk - 40 GiB overhead)
--->
 
 
 ## Beta-Testing Phase

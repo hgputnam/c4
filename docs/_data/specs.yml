@@ -10,12 +10,12 @@ ram_min: NA
 ram_max: NA
 
 ## Disk /swap [GiB]:
-swap_min: NA
-swap_max: NA
+swap_min: 4
+swap_max: 4
 
 ## Local /tmp [GiB]:
-local_tmp_size_min: NA
-local_tmp_size_max: NA
+local_tmp_size_min: 8
+local_tmp_size_max: 8
 
 ## Local /scratch [TiB]:
 local_scratch_size_min: NA
