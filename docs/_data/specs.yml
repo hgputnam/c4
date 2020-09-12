@@ -10,9 +10,10 @@ gpus: 0
 communal_gpu_nodes: 0
 communal_gpus: 0
 
+## for host in c4-n{1..9}; do echo "$host: $(ssh "$host" free -h 2> /dev/null | grep Mem | cut -c 1-20)"; done
 ## RAM [GiB]:
-ram_min: NA
-ram_max: NA
+ram_min: 512
+ram_max: 768
 
 ## Disk /swap [GiB]:
 swap_min: 4
