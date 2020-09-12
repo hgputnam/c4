@@ -50,7 +50,7 @@ _Starting September 1, 2020_
 
 * [x] The software stacks under /software is backed up
 
-### Miscellanous
+### Miscellaneous
 
 * [ ] Idle shells with automatically log out after 24 hours
 
@@ -59,7 +59,7 @@ _Starting September 1, 2020_
 
 ## Beta-Testing Phase
 
-**Who**: Invite additional advanced users from other labs.  We are interesting in labs who are willing to migrate the exising TIPCC compute nodes over to C4, e.g. labs will a single compute node
+**Who**: Invite additional advanced users from other labs.  We are interesting in labs who are willing to migrate the existing TIPCC compute nodes over to C4, e.g. labs will a single compute node
 
 **What**: Feature requests that were too complex for the alpha-testing phase will addressed.
 
@@ -97,7 +97,7 @@ _Starting September 1, 2020_
 
 * [ ] Mount _existing_ lab storage on TIPCC also on C4
 
-### Miscellanous
+### Miscellaneous
 
 * [ ] Expand existing Bash configuration to Csh
 
