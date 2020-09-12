@@ -23,9 +23,10 @@ swap_max: 4
 local_tmp_size_min: 8
 local_tmp_size_max: 8
 
+## for host in c4-n{1..9}; do echo "$host: $(ssh "$host" df -P -h /scratch 2> /dev/null | tail -n -1)"; done
 ## Local /scratch [TiB]:
-local_scratch_size_min: NA
-local_scratch_size_max: NA
+local_scratch_size_min: 1.8
+local_scratch_size_max: 11
 
 ## Global /wynton/scratch [TiB]:
 global_scratch_size_total: 262
