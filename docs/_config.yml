@@ -13,7 +13,7 @@ cluster:
   version: "0.1"
   email_admin: harry.putnam@ucsf.edu
   email_support: harry.putnam@ucsf.edu
-  
+
 login:
   name: "c4-log1"
   hostname: "c4-log1.ucsf.edu"
@@ -60,7 +60,7 @@ transfer2:
   name: "not-yet-available-c4-dt2"
   hostname: "non-yet-available-c4-dt2.ucsf.edu"
   ip: "NA.NA.NA.NA"
-  
+
 assets:
   status_root_path: "https://raw.githubusercontent.com/UCSF-HPC/wynton-slash/master/wynton/docs"
 
