@@ -16,7 +16,7 @@ _Starting September 1, 2020_
 
 * [x] Interactive jobs, e.g. `srun --pty bash`.
 
-* [ ] Job email notification
+* [x] Job email notification
 
 * [x] Torque/PBS wrappers (emulating Torque/PBS on Slurm)
 
@@ -46,11 +46,13 @@ _Starting September 1, 2020_
 
 ### Backup
 
-* [x] Users' home directories are backed up
+* [x] Users' home folders are backed up
 
-* [x] The software stacks under /software is backed up
+* [x] Software stacks under /software are backed up
 
 ### Miscellaneous
+
+* [x] X11 Forwarding on development nodes
 
 * [ ] Idle shells with automatically log out after 24 hours
 
