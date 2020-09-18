@@ -38,7 +38,7 @@ _Starting September 1, 2020_
 
 * [x] Lab compute nodes: 4 new lab nodes (4*56 = 224 physical cores)
 
-* [ ] Add another communal node (revive TIPCC node n2)
+* [x] Add another communal node (revive TIPCC node n2 => c4-n10)
 
 ### Storage
 
