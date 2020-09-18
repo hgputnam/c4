@@ -14,9 +14,9 @@ _Starting September 1, 2020_
 
 * [x] Rudimentary Slurm configuration with one shared partition ("queue") and one lab-owned partition.
 
-* [x] Interactive jobs, e.g. `srun --pty bash`.
+* [x] Interactive jobs, e.g. `srun --pty bash`
 
-* [x] Job email notification
+* [x] Job email notification, e.g. `srun --mail-type=ALL --mail-user=<email-address> --pty bash`
 
 * [x] Torque/PBS wrappers (emulating Torque/PBS on Slurm)
 
