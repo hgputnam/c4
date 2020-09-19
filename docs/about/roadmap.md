@@ -120,6 +120,10 @@ _Starting September 1, 2020_
 
 * [ ] Very old, legacy scientific software on TIPCC will be re-installed on C4 if requested
 
+### Miscellaneous
+
+* [ ] [Globus] endpoint on C4 for fast file transfers to and from participating organization
+
 
 
 ## Migration
