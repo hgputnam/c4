@@ -10,6 +10,9 @@ _Starting September 1, 2020_
 
 **Outcome**: At the end of this phase, we will have a rudimentary HPC environment that will allow advanced users to run scientific jobs.
 
+**What to expect**: All (login, development, and compute) nodes may be rebooted at any time in order to be updated.  We will however try our best to avoid sudden reboots without notifications.
+
+
 ### Scheduler
 
 * [x] Rudimentary Slurm configuration with one shared partition ("queue") and one lab-owned partition.
@@ -67,6 +70,9 @@ _Starting September 1, 2020_
 
 **Outcome**: At the end of this phase, we will have a solid HPC environment that will allow the majority of users to run scientific jobs on C4 that they previously ran on TIPCC.  We are confident that we can go forward with inviting all TIPCC users.
 
+**What to expect**: Avoid running multi-day jobs on the scheduler because compute nodes may need to be taken offline and rebooted as soon as possible, even if it requires terminating running jobs.  Login, data-transfer, and development nodes will be rebooted after asking all users to logged out.
+
+
 ### Scheduler
 
 * [ ] Finalize basic configuration allowing users to submit as much as they want without starving out other users
@@ -109,6 +115,9 @@ _Starting September 1, 2020_
 **Prerequisites**: We know everything works fine. No going back
 
 **Who**: All TIPCC user are welcome to start using C4
+
+**What to expect**: The cluster can be considered fairly stable. However, there might be needs for further updates requiring reboots and early-termination of jobs.  Avoid running jobs longer than 3-4 days.
+
 
 ### Accounts
 
