@@ -57,7 +57,7 @@ _Starting September 1, 2020_
 
 * [x] X11 Forwarding on development nodes
 
-* [ ] Idle shells with automatically log out after 24 hours
+* [x] Shells and interactive jobs idle for more than 24 hours are automatically logged out
 
 * [ ] All development and compute nodes have the same configuration of local /tmp and local /scratch
 
