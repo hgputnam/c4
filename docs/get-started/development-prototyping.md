@@ -7,7 +7,7 @@ Although you should always run analyses via the job scheduler, there are times w
 </div>
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Any shell session that has been idle for more than eight hours will timeout and exit automatically.
+Any shell session that has been idle for more than 24 hours will timeout and exit automatically.
 </div>
 
 ## List of Development Nodes

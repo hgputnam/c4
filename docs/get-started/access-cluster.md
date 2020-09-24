@@ -73,7 +73,7 @@ Connection to {{ site.login.hostname }} closed.
 An alternative is to press <kbd>Ctrl-D</kbd> (sends "End-Of-File" [EOF]) at the command-line prompt.
 
 <div class="alert alert-warning" role="alert" style="margin-top: 3ex">
-Any shell session that has been idle for more than eight hours will timeout and exit automatically.
+Any shell session that has been idle for more than 24 hours will timeout and exit automatically.
 </div>
 
 
