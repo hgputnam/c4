@@ -19,7 +19,7 @@ _Starting September 1, 2020_
 
 * [x] Interactive jobs, e.g. `srun --pty bash`
 
-* [x] Job email notification, e.g. `srun --mail-type=ALL --mail-user=<email-address> --pty bash`
+* [x] Job email notification, e.g. `sbatch --export=NONE --mail-type=ALL --mail-user=<email-address> script.sh`
 
 * [x] Torque/PBS wrappers (emulating Torque/PBS on Slurm)
 
@@ -39,13 +39,29 @@ _Starting September 1, 2020_
 
 ### Compute power
 
-* [x] Lab compute nodes: 4 new lab nodes (4*56 = 224 physical cores)
+* [x] New lab compute nodes:
+  - [x] c4-n[6-9]: 4 new lab nodes for the Witte Lab (4*56 = 224 physical cores)
 
-* [x] Add another communal node (revive TIPCC node n2 => c4-n10)
+* [x] Addition common nodes:
+  - [x] c4-n10 - revived from TIPCC (node n2)
+  - [ ] c4-n11 - revived from TIPCC (node n10)
 
 ### Storage
 
+* [x] Mount some _existing_ TIPCC storage 
+   - [x] `/home`   - TIPCC home folders
+   - [x] `/backup` - Weekly rsync backup of TIPCC home folders
+
 * [ ] Mount _new_ lab storage (not available on TIPCC)
+   - [x] `/wittelab/data[3-6]`
+
+* [ ] Mount some _existing_ TIPCC lab storage
+   - [x] `/blellochlab/data1`
+   - [ ] `/cbc`
+   - [x] `/cbc2/data[1-3]`
+   - [x] `/diazlab/data[2-3]`
+   - [x] `/francislab/data1`
+
 
 ### Backup
 
@@ -103,7 +119,7 @@ _Starting September 1, 2020_
 
 ### Storage
 
-* [ ] Mount _existing_ lab storage on TIPCC also on C4
+* [ ] Mount more _existing_ lab storage on TIPCC also on C4
 
 ### Miscellaneous
 
