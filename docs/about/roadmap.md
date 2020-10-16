@@ -25,9 +25,9 @@ _Starting September 1, 2020_
 
 ### Software
 
-* [x] Shared CBI software + modules, i.e. /software/c4/CBI/
+* [x] Shared CBI software + modules, i.e. `/software/c4/CBI/`
 
-* [ ] Shared software + modules of other labs: /software/c4/{group}/
+* [ ] Shared software + modules of other labs: `/software/c4/{group}/`
 
 ### Documentation and support
 
@@ -67,7 +67,7 @@ _Starting September 1, 2020_
 
 * [x] Users' home folders are backed up
 
-* [x] Software stacks under /software are backed up
+* [x] Software stacks under `/software` are backed up
 
 ### Miscellaneous
 
@@ -75,7 +75,7 @@ _Starting September 1, 2020_
 
 * [x] Shells and interactive jobs idle for more than 24 hours are automatically logged out
 
-* [ ] All development and compute nodes have the same configuration of local /tmp and local /scratch
+* [x] All development and compute nodes have the same configuration of local `/tmp` (8 GiB) and local `/scratch` (whatever is available)
 
 
 ## Beta-Testing Phase
